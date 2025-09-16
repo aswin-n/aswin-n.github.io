@@ -4,20 +4,81 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Aswin Natarajan — Resume</title>
+  <meta name="description" content="Resume of Aswin Natarajan" />
+  <meta name="color-scheme" content="light dark" />
   <style>
-    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:2rem;line-height:1.5}
-    .wrap{max-width:900px;margin:auto}
-    .btn{display:inline-block;padding:.6rem 1rem;border:1px solid #ccc;border-radius:8px;text-decoration:none}
-    .viewer{height:85vh;border:1px solid #eee;margin-top:1rem}
+    :root { --border:#e5e7eb; --text:#111827; --muted:#6b7280; --bg:#ffffff; }
+    @media (prefers-color-scheme: dark) {
+      :root { --border:#2d2f36; --text:#e5e7eb; --muted:#9ca3af; --bg:#0b0c0f; }
+    }
+
+    * { box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      line-height:1.6;
+      color:var(--text);
+      background:var(--bg);
+      display:flex; justify-content:center; padding:2rem;
+    }
+    .wrap{ width:100%; max-width: 980px; }
+    h1{ margin:0 0 1rem; letter-spacing:.2px; }
+    .actions{ display:flex; gap:.75rem; align-items:center; flex-wrap:wrap; margin-bottom:1rem; }
+    .btn{
+      display:inline-block; padding:.6rem 1rem; border:1px solid var(--border);
+      border-radius:10px; text-decoration:none; color:var(--text);
+    }
+    .btn:hover{ transform: translateY(-1px); }
+    .hint{ color:var(--muted); font-size:.9rem; }
+
+    .viewer{
+      width:100%;
+      height:min(85vh, 1100px);
+      border:1px solid var(--border);
+      border-radius:12px;
+      margin-top:1rem;
+      box-shadow: 0 6px 24px rgba(0,0,0,.06);
+    }
+
+    footer{
+      margin-top:2rem;
+      padding-top:1rem;
+      border-top:1px solid var(--border);
+      font-size:.9rem;
+      color:var(--muted);
+      text-align:center;
+    }
+    footer a{ color:inherit; text-decoration:none; }
+    footer a:hover{ text-decoration:underline; }
+
+    @media (max-width:720px){
+      body{ padding:1rem; }
+      .viewer{ height:70vh; }
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <h1>Aswin Natarajan — Resume</h1>
-    <p><a class="btn" href="Aswin-Natarajan-Resume.pdf" download>Download PDF</a></p>
+
+    <div class="actions">
+      <a class="btn" href="Aswin-Natarajan-Resume.pdf" download>Download PDF</a>
+      <a class="btn" href="Aswin-Natarajan-Resume.pdf" target="_blank" rel="noopener">Open in new tab</a>
+      <span class="hint">Tip: use the download button for the best print quality.</span>
+    </div>
+
     <object class="viewer" data="Aswin-Natarajan-Resume.pdf" type="application/pdf">
-      <p>PDF preview not available. <a href="Aswin-Natarajan-Resume.pdf">Open the resume</a>.</p>
+      <p>
+        PDF preview not available on this device.
+        <a href="Aswin-Natarajan-Resume.pdf" target="_blank" rel="noopener">Open the resume</a>.
+      </p>
     </object>
+
+    <footer>
+      © 2025 Aswin Natarajan • 
+      <a href="mailto:your.email@example.com">your.email@example.com</a> • 
+      <a href="https://linkedin.com/in/aswinn" target="_blank" rel="noopener">LinkedIn</a>
+    </footer>
   </div>
 </body>
 </html>
